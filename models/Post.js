@@ -14,7 +14,7 @@ const PostSchema = new mongoose.Schema({
     require: true,
   },
   bpm: {
-    type: Number,
+    type: String,
     required: true,
   },
   user: {

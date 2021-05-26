@@ -37,8 +37,7 @@ module.exports = {
         title: req.body.title,
         audio: result.secure_url,
         cloudinaryId: result.public_id,
-        bpm: 0,
-        likes: 0,
+        bpm: req.body.bpm,
         user: req.user.id,
       });
       console.log("Post has been added!");
