@@ -4,12 +4,21 @@
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
+            <!-- <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
+            </a> -->
+            <figure>
+              <figcaption>
+                <%= posts[i].title%>
+              </figcaption>
+              <audio controls src="/post/<%= posts[i].audio%>" type="audio/mp3">
+                Your browser does not support the
+                <code>audio</code> element.
+              </audio>
+            </figure>
           </li>
-        <% } %>
-        </ul>
+          <% } %>
+      </ul>
     </div>
-  </div>  
-<%- include('partials/footer') -%>
+  </div>
+  <%- include('partials/footer') -%>
