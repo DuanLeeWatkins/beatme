@@ -14,16 +14,16 @@
           <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="title">
+              <input type="text" class="form-control" id="title" name="title" required>
             </div>
             <div class="mb-3">
               <label for="bpm" class="form-label">BPM</label>
-              <textarea class="form-control" id="bpm" name="bpm"></textarea>
+              <input type="number" class="form-control" min="0" id="bpm" name="bpm" required></textarea>
             </div>
 
             <div class="mb-3">
               <label for="audioUpload" class="form-label">Beat</label>
-              <input type="file" class="form-control" id="audioUpload" name="file" accept="audio/mp3">
+              <input type="file" class="form-control" id="audioUpload" name="file" accept="audio/mp3" required>
             </div>
             <div class="mb-3">
               <label for="tags" class="form-label">Tags</label>
@@ -43,7 +43,7 @@
             </li>
             <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-5 w-25">
           <a class="btn btn-primary" href="/feed">Return to Feed</a>
         </div>
       </div>
