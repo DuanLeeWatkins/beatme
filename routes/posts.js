@@ -17,6 +17,6 @@ router.post(
 
 // router.put("/likePost/:id", postsController.likePost);
 
-https: router.delete("/deletePost/:id", postsController.deletePost);
+router.delete("/deletePost/:id", postsController.deletePost);
 
 module.exports = router;

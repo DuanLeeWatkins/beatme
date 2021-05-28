@@ -28,7 +28,7 @@ module.exports = {
   },
   createPost: async (req, res) => {
     try {
-      // Upload image to cloudinary
+      // Upload audio to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path, {
         resource_type: "video",
       });
