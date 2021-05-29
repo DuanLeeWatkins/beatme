@@ -4,9 +4,6 @@
             <ul class="row list-unstyled">
                 <% for(var i=0; i<posts.length; i++) {%>
                     <li class="col-6 justify-content-between mt-5">
-                        <!-- <a href="/post/<%= posts[i]._id%>">
-                            <img class="img-fluid" src="<%= posts[i].image%>">
-                        </a> -->
                         <figure>
                             <figcaption>
                                 <%= posts[i].title%>
@@ -16,6 +13,11 @@
                                 <code>audio</code> element.
                             </audio>
                         </figure>
+                        <form action="/posts/deletePost<%= posts[i].id %>?_method=DELETE" method="POST" class="col-3">
+                            <button class="btn btn-primary fa fa-trash" type="submit"></button>
+                        </form>
+
+
                     </li>
                     <% } %>
             </ul>
