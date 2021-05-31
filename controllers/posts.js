@@ -57,12 +57,12 @@ module.exports = {
         resource_type: "video",
       });
       // Delete post from db
-      await Post.remove({ _id: req.params.id });
+      await Post.remove({ id: req.params.id });
       console.log("req.params");
       console.log("Deleted Post");
-      res.redirect("/profile");
+      res.redirect("/feed");
     } catch (err) {
-      res.redirect("/profile");
+      res.redirect("/feed");
     }
   },
 };
