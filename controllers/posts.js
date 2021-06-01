@@ -42,7 +42,7 @@ module.exports = {
         user: req.user.id,
       });
       console.log("Post has been added!");
-      res.redirect("/profile");
+      res.redirect("/feed");
     } catch (err) {
       console.log(err);
     }
@@ -57,7 +57,7 @@ module.exports = {
         resource_type: "video",
       });
       // Delete post from db
-      await Post.remove({ id: req.params.id });
+      await Post.deleteOne({ _id: req.params.id });
       console.log("req.params");
       console.log("Deleted Post");
       res.redirect("/feed");
