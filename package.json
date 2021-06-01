@@ -1,7 +1,10 @@
 {
   "name": "binary-upload-boom",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "Beatme",
+  "engines": {
+    "node": "14.x"
+  }
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
