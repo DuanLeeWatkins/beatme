@@ -1,5 +1,5 @@
 {
-  "name": "binary-upload-boom",
+  "name": "beatme",
   "version": "1.0.0",
   "description": "Beatme",
   "engines": {
@@ -21,7 +21,6 @@
     "express": "^4.17.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.1",
-    "heroku": "^7.2.0",
     "method-override": "^3.0.0",
     "mongodb": "^3.6.5",
     "mongoose": "^5.12.3",
