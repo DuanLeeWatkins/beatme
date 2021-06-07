@@ -3,14 +3,16 @@ h1 a {
   text-decoration: none;
 }
 
-
-
 .btn-primary {
   background-color: #7353ba;
   border-color: #7353ba;
 }
 
-a :hover {
+.btn-primary:hover {
   background-color: #654b95;
   border-color: #654b95;
+}
+
+#go-to-feed-btn {
+  margin-top: 78px;
 }
