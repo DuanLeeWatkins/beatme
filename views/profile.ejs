@@ -1,15 +1,21 @@
 <%- include('partials/header') -%>
   <div class="container">
+    <div class="user-container mt-5">
+      
+        <p><strong>User Name</strong>: <%= user.userName %>
+        </p>
+        <p><strong>Email</strong>: <%= user.email %>
+        </p>
+        <div class="row col justify-content-around">
+          <a href="/logout" id="logout-btn" class="col-2 btn btn-primary">Logout</a>
+          <a class=" col-2 btn btn-primary" href=" /feed">Go to Feed</a>
+        </div>
+        
+    </div>
     <div class="row mt-5">
       <div class="col-6">
-        <div>
-          <p><strong>User Name</strong>: <%= user.userName %>
-          </p>
-          <p><strong>Email</strong>: <%= user.email %>
-          </p>
-          <a href="/logout" id="logout-btn" class="col-4 btn btn-primary">Logout</a>
-        </div>
-        <div class="mt-5">
+        
+        <div class="container align-items-center mt-5">
           <h2>Add a beat</h2>
           <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-3">
@@ -43,8 +49,7 @@
             </li>
             <% } %>
         </ul>
-        <div class="row justify-content-center col-4 mt-5 w-50">
-          <a class="btn btn-primary" id="go-to-feed-btn" href="/feed">Go to Feed</a>
+          
         </div>
       </div>
     </div>
