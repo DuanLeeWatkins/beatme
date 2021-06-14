@@ -1,57 +1,43 @@
 <%- include('partials/header') -%>
   <div class="container">
     <div class="user-container mt-5">
-      
-        <p><strong>User Name</strong>: <%= user.userName %>
-        </p>
-        <p><strong>Email</strong>: <%= user.email %>
-        </p>
-        <div class="row col justify-content-around">
-          <a href="/logout" id="logout-btn" class="col-2 btn btn-primary">Logout</a>
-          <a class=" col-2 btn btn-primary" href=" /feed">Go to Feed</a>
-        </div>
-        
-    </div>
-    <div class="row mt-5">
-      <div class="col-6">
-        
-        <div class="container align-items-center mt-5">
-          <h2>Add a beat</h2>
-          <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-            <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="title" required>
-            </div>
-            <div class="mb-3">
-              <label for="bpm" class="form-label">BPM</label>
-              <input type="number" class="form-control" min="0" id="bpm" name="bpm" required></textarea>
-            </div>
 
-            <div class="mb-3">
-              <label for="audioUpload" class="form-label">Beat</label>
-              <input type="file" class="form-control" id="audioUpload" name="file" accept="audio/mp3" required>
-            </div>
-            <div class="mb-3">
-              <label for="tags" class="form-label">Tags</label>
-              <textarea class="form-control" id="tags" name="tags"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-          </form>
-        </div>
+      <p><strong>User Name</strong>: <%= user.userName %>
+      </p>
+      <p><strong>Email</strong>: <%= user.email %>
+      </p>
+      <div class="row col-3 justify-content-around w-100 h-100">
+        <a href="/logout" id="logout-btn" class="col-2 h-25 btn btn-primary">Logout</a>
+        <a id="go-to-feed-btn" class=" col-2 h-25 w-25 btn btn-primary" href=" /feed">Go to Feed</a>
       </div>
-      <div class="col-6">
-        <ul class="row list-unstyled">
-          <% for(var i=0; i<posts.length; i++) {%>
-            <li class="col-6 justify-content-between mt-5">
-              <a href="/post/<%= posts[i]._id%>">
-                <img class="img-fluid" src="<%= posts[i].image%>">
-              </a>
-            </li>
-            <% } %>
-        </ul>
-          
-        </div>
+
+    </div>
+    <div class="add-beat-form-container align-items-center">
+
+      <div class="container w-50 align-items-center mt-5">
+        <h2>Add a beat</h2>
+        <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+          </div>
+          <div class="mb-3">
+            <label for="bpm" class="form-label">BPM</label>
+            <input type="number" class="form-control" min="0" id="bpm" name="bpm" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="audioUpload" class="form-label">Beat</label>
+            <input type="file" class="form-control" id="audioUpload" name="file" accept="audio/mp3" required>
+          </div>
+          <div class="mb-3">
+            <label for="tags" class="form-label">Tags</label>
+            <textarea class="form-control" id="tags" name="tags"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+        </form>
       </div>
+
     </div>
   </div>
   </div>
