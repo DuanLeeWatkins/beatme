@@ -10,6 +10,10 @@ h1 a:hover{
   color: black;
 }
 
+h2 {
+  color: black;
+}
+
 .btn-primary {
   background-color: #7353ba;
   border-color: #7353ba;
