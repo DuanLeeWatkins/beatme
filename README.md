@@ -10,4 +10,4 @@ beats/instrumentals to store online and have access to them anywhere.
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, Node.js, Boostrap, MongoDB, Cloudinary, Express, Mongoose,
+**Tech used:** HTML, CSS, JavaScript, Node.js, Boostrap, MongoDB, Cloudinary, Express, Mongoose, Passport, and Heroku
