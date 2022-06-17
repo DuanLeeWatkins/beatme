@@ -1,6 +1,6 @@
 const multer = require("multer");
 const path = require("path");
-
+//Used to upload files
 module.exports = multer({
   storage: multer.diskStorage({}),
   fileFilter: (req, file, cb) => {

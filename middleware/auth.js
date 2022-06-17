@@ -1,3 +1,5 @@
+
+//Used to control sign in experience
 module.exports = {
   ensureAuth: function (req, res, next) {
     if (req.isAuthenticated()) {

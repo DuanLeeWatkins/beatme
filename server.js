@@ -4,8 +4,11 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
+//Uses HTTP verbs in places where the client doesn't support it
 const methodOverride = require("method-override");
+//Flash Messages for application
 const flash = require("express-flash");
+//Logs HTTP requests
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
@@ -46,7 +49,7 @@ app.use(
   })
 );
 
-// Passport middleware
+// Passport Authentication middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
