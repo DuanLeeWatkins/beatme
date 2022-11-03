@@ -15,7 +15,7 @@ const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 
 //Use .env file in config folder
-require("dotenv").config({ path: "./config/env" });
+require("dotenv").config({ path: "./config/.env" });
 
 // Passport config
 require("./config/passport")(passport);
