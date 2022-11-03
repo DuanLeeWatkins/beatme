@@ -2,6 +2,8 @@ const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
 
+
+// Handles Reading the user login info
 exports.getLogin = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
@@ -11,6 +13,8 @@ exports.getLogin = (req, res) => {
   });
 };
 
+//Handles Creating a login entry for the user
+//Validates and authenticates the user info
 exports.postLogin = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -44,6 +48,7 @@ exports.postLogin = (req, res, next) => {
   })(req, res, next);
 };
 
+//Handles logging the user out
 exports.logout = (req, res) => {
   req.logout();
   req.session.destroy((err) => {
@@ -54,6 +59,7 @@ exports.logout = (req, res) => {
   });
 };
 
+//Handles Reading the new user info
 exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
@@ -63,6 +69,7 @@ exports.getSignup = (req, res) => {
   });
 };
 
+//Handles Creating the new user entry
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -88,6 +95,7 @@ exports.postSignup = (req, res, next) => {
     password: req.body.password,
   });
 
+  //Seeing if the user already exists
   User.findOne(
     { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
     (err, existingUser) => {
