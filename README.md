@@ -5,7 +5,7 @@ beats/instrumentals to store online and have access to them anywhere.
 
 
 
-**Link to project:** (https://heroku-beatme.herokuapp.com/)
+**Link to project:** (https://beatme-production.up.railway.app/)
 ![Image of Beatme app](https://github.com/DuanLeeWatkins/beatme/blob/main/public/imgs/beatme-screenshot.png)
 
 ## How It's Made:
